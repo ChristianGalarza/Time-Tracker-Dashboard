@@ -1,0 +1,180 @@
+body {
+    margin: 0;
+    background: var(--Very-dark-blue);
+    color: var(--white);
+    font-family: 'Rubik',sans-serif;
+}
+
+.wrapper{
+    padding: 25px;
+    max-width: 1440px;
+    margin: auto;
+}
+
+h1{
+    margin: 0;
+    font-size: 18px;
+}
+
+:root{
+    /* Primary */
+    --white: #fff;
+    --Blue: hsl(246, 80%, 60%);
+    --Light-red: hsl(15, 100%, 70%);
+    --Soft-blue: hsl(195, 74%, 62%);
+    --Light-red-study: hsl(348, 100%, 68%);
+    --Lime-green: hsl(145, 58%, 55%);
+    --Violet: hsl(264, 64%, 52%);
+    --Soft-orange: hsl(43, 84%, 65%);
+    /* Neutral */
+    --Very-dark-blue: hsl(226, 43%, 10%);
+    --Dark-blue: hsl(235, 46%, 20%);
+    --Desaturated-blue: hsl(235, 45%, 61%);
+    --Pale-Blue: hsl(236, 100%, 87%);
+}
+
+.profile-card{
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    
+    
+    overflow: hidden;
+}
+
+.profile-card-details{
+    padding: 10px 30px;
+    background: var(--Blue);
+    display: flex;
+    border-radius: 15px;
+    /* border: 1px solid red; */
+}
+
+.profile-card-details-image{
+    border: 4px solid var(--white);
+    border-radius: 50%;
+    width: 70px;
+}
+
+.profile-card-details-image img{
+    width: 100%;
+    height: 100%;
+}
+
+.profile-card-titles{
+    font-weight: lighter;
+    margin: auto 0;
+    padding-left: 20px;
+}
+
+.profile-card-titles-reportFor{
+    font-size: .9em;
+    color: var(--Pale-Blue);
+}
+
+.profile-card-titles-name{
+    display: block;
+    font-size: 22px;
+}
+
+.profile-card-filter{
+    /* border: 2px solid yellow; */
+    background: var(--Dark-blue);
+    margin-top: -20px;
+    z-index: -1;
+    height: 75px;
+    border-radius: 0  0  15px 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+/* ------------------------ */
+.card{
+    margin-top: 25px;
+}
+
+.card-upper-border{
+    overflow: hidden;
+    z-index: -1;
+    height: 55px;
+    position: relative;
+    border-radius: 15px 15px 0 0;
+    padding: 0 15px;
+}
+
+
+.card-upper-border-img{
+    position: absolute;
+    right: 15px;
+    bottom: -35px;  
+}
+
+.card-details{
+    padding: 30px 25px 20px;
+    border-radius: 15px;
+    margin-top: -15px;
+    background: var(--Dark-blue);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.card-details-title,
+.card-details-time{
+    margin: 0;
+}
+
+.card-details-area{
+    font-size: 18px;
+    font-weight: bold;
+}
+.card-details-time{
+    display: block;
+    font-weight: lighter;
+    font-size: 25px;
+}
+
+.dots{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.dot{
+    margin-right: 3px;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    background: var(--Pale-Blue);
+}
+
+.card-details-last{
+    font-weight: lighter;
+    font-size: .95em;
+    text-align: end;
+    color: var(--Pale-Blue);
+}
+
+.card-work{
+    background: var(--Light-red);
+}
+
+.card-play{
+    background: var(--Soft-blue);
+}
+
+.card-study{
+background: var(--Light-red-study);    
+}
+
+.card-exercise{
+    background: var(--Lime-green);
+}
+
+.card-social{
+    background: var(--Violet);
+}
+
+.card-self{
+    background: var(--Soft-orange);
+}
