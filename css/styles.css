@@ -11,6 +11,11 @@ body {
     margin: auto;
 }
 
+.grid{
+    display: grid;
+    row-gap: 25px;
+}
+
 h1{
     margin: 0;
     font-size: 18px;
@@ -37,9 +42,6 @@ h1{
     margin-top: 80px;
     display: flex;
     flex-direction: column;
-    
-    
-    overflow: hidden;
 }
 
 .profile-card-details{
@@ -78,7 +80,6 @@ h1{
 }
 
 .profile-card-filter{
-    /* border: 2px solid yellow; */
     background: var(--Dark-blue);
     margin-top: -20px;
     z-index: -1;
@@ -90,10 +91,6 @@ h1{
 }
 
 /* ------------------------ */
-.card{
-    margin-top: 25px;
-}
-
 .card-upper-border{
     overflow: hidden;
     z-index: -1;
@@ -177,4 +174,91 @@ background: var(--Light-red-study);
 
 .card-self{
     background: var(--Soft-orange);
+}
+
+@media (min-width: 500px){
+    .time-cards > .grid{
+        grid-template-columns: 1fr 1fr;
+        column-gap: 25px;
+    }
+}
+
+@media (min-width: 975px){
+    .wrapper{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        padding: 0;
+    }
+
+    .grid{
+        grid-template-columns: 1fr 1fr;
+        column-gap: 30px;
+    }
+
+    .time-cards > .grid{
+        grid-template-columns: repeat(3,minmax(200px,1fr));
+    }
+
+    .profile-card{
+        display: grid;
+        grid-template-areas: 
+        "a"
+        "b";
+        margin: 0;
+    }
+
+    .profile-card-details{
+        grid-area: a;
+        padding: 35px 85px 50px 30px;
+        flex-direction: column;
+    }
+
+    .profile-card-filter{
+        grid-area: b;
+        height: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: end;
+        padding: 0px 30px;
+        padding-bottom: 20px;
+    }
+
+    .profile-card-titles{
+        padding: 0;
+        margin: 0;
+    }
+    
+    .card-details{
+        grid-template-areas: 
+        "a b"
+        "c c"
+        "d d";
+    }
+
+
+    .card-details-title{
+        grid-area: a;
+    }
+    .dots{
+        grid-area: b;
+    }
+    
+    .card-details-time{
+        grid-area: c;
+        margin-top: 35px;
+        font-size: 42px;
+    }
+    .card-details-last{
+        grid-area: d;
+        text-align: start;
+    }
+    .profile-card-titles-reportFor{
+        font-size: .95em;
+    }
+    .profile-card-titles-name{
+        font-size: 42px;
+    }
 }
