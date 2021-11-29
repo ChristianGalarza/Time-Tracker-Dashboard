@@ -238,7 +238,7 @@ background: var(--Light-red-study);
         height: 100%;
         flex-direction: column;
         align-items: flex-start;
-        justify-content: end;
+        justify-content: flex-end;
         padding: 0px 30px;
         padding-bottom: 20px;
     }
