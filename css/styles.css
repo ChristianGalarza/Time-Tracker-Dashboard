@@ -16,6 +16,10 @@ body {
     row-gap: 25px;
 }
 
+.radio{
+    display: none;
+}
+
 h1{
     margin: 0;
     font-size: 18px;
@@ -42,6 +46,9 @@ h1{
     margin-top: 80px;
     display: flex;
     flex-direction: column;
+}
+.profile-card-details{
+    z-index: 950;
 }
 
 .profile-card-details{
@@ -82,14 +89,24 @@ h1{
 .profile-card-filter{
     background: var(--Dark-blue);
     margin-top: -20px;
-    z-index: -1;
+    z-index: 900;
     height: 75px;
     border-radius: 0  0  15px 15px;
     display: flex;
     justify-content: space-around;
     align-items: flex-end;
+    
 }
 
+.radio:checked ~ .profile-card-filter-option{
+    color: white;
+}
+
+.profile-card-filter-option{
+    color: var(--Pale-Blue);
+    transition: .25s color;
+    cursor: pointer;
+}
 /* ------------------------ */
 .card-upper-border{
     overflow: hidden;
